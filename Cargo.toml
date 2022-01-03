@@ -15,3 +15,6 @@ semver = "1.0"
 
 [build-dependencies]
 semver = "1.0"
+
+[badges]
+github = { repository = "Ayush1325/kde-frameworks-rs" }
