@@ -23,12 +23,12 @@ fn main() {
 }
 
 fn probe_kde() -> (Version, PathBuf, PathBuf) {
-    println!("cargo:rerun-if-env-changed=DEP_KF_INCLUDE_PATH");
-    println!("cargo:rerun-if-env-changed=DEP_KF_LIBRARY_PATH");
+    println!("cargo:rerun-if-env-changed=KF_INCLUDE_PATH");
+    println!("cargo:rerun-if-env-changed=KF_LIBRARY_PATH");
 
     match (
-        std::env::var("DEP_KF_INCLUDE_PATH").ok(),
-        std::env::var("DEP_KF_LIBRARY_PATH").ok(),
+        std::env::var("KF_INCLUDE_PATH").ok(),
+        std::env::var("KF_LIBRARY_PATH").ok(),
     ) {
         (Some(include_path), Some(library_path)) => (
             get_kf_version(),
@@ -47,7 +47,7 @@ fn probe_kde() -> (Version, PathBuf, PathBuf) {
             )
         }
         (Some(_), None) | (None, Some(_)) => {
-            panic!("KF5_KI18n_INCLUDE_PATH and KF5_KI18n_LIBRARY_PATH env variable must be either both empty or both set.")
+            panic!("KF_INCLUDE_PATH and KF_LIBRARY_PATH env variable must be either both empty or both set.")
         }
     }
 }
