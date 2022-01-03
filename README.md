@@ -1,6 +1,7 @@
-[![Workflow Status](https://github.com/Ayush1325/kde-frameworks-rs/workflows/main/badge.svg)](https://github.com/Ayush1325/kde-frameworks-rs/actions?query=workflow%3A%22main%22)
-
 # kde_frameworks
+[![Crates.io](https://img.shields.io/crates/v/kde_frameworks.svg)](https://crates.io/crates/kde_frameworks)
+[![Documentation](https://docs.rs/kde_frameworks/badge.svg)](https://docs.rs/kde_frameworks/)
+[![Workflow Status](https://github.com/Ayush1325/kde-frameworks-rs/workflows/main/badge.svg)](https://github.com/Ayush1325/kde-frameworks-rs/actions?query=workflow%3A%22main%22)
 
 ## Introduction
 This crate serves as the base for all the KDE Frameworks Crate written by me. It sets important
