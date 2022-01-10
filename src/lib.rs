@@ -4,6 +4,16 @@
 //!
 //! Currently, mostly supposed to be used as a build dependency.
 //!
+//! # Install kf5-config
+//! ## Ubuntu
+//! ```sh
+//! sudo apt install libkf5kdelibs4support5-bin
+//! ```
+//! ## Fedroa
+//! ```sh
+//! sudo dnf install kf5-kdelibs4support
+//! ```
+//!
 //! # Environment Variables Read By this Crate
 //! - It is optional to provide these variables. If these variables are not present, then `kf5-config`
 //!   must be present in the path.

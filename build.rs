@@ -29,21 +29,6 @@ fn probe_kde() -> (Version, PathBuf, PathBuf) {
     println!("cargo:rerun-if-env-changed=KF_INCLUDE_PATH");
     println!("cargo:rerun-if-env-changed=KF_LIBRARY_PATH");
 
-    if let Ok(x) = std::env::var("DOCS_RS") {
-        if x.parse() == Ok(1) {
-            const DOCS_RS_KF_VERSION: &str = "5.89.0";
-            const DOCS_RS_KF_INCLUDE_PATH: &str = "/usr/include";
-            const DOCS_RS_KF_LIBRARY_PATH: &str = "/usr/lib";
-            return (
-                DOCS_RS_KF_VERSION
-                    .parse()
-                    .expect("Error in Parsing Default Version"),
-                DOCS_RS_KF_LIBRARY_PATH.into(),
-                DOCS_RS_KF_INCLUDE_PATH.into(),
-            );
-        }
-    }
-
     match (
         std::env::var("KF_VERSION").ok(),
         std::env::var("KF_INCLUDE_PATH").ok(),
