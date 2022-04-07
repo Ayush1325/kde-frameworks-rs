@@ -13,6 +13,7 @@ fn main() {
     );
 
     println!("cargo:rustc-env=KF_VERSION={}", kf_version);
+
     println!(
         "cargo:rustc-env=KF_LIBRARY_PATH={}",
         kf_library_path.to_str().unwrap()

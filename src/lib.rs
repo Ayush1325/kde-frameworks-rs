@@ -29,6 +29,7 @@
 
 pub mod helpers;
 
+use semver::Version;
 use std::path::PathBuf;
 
 /// Function to link a KDE Library.
@@ -56,4 +57,13 @@ pub fn get_lib_include_path(lib: &str) -> Result<PathBuf, semver::Error> {
     Ok(helpers::get_kf_include_path()
         .join(format!("KF{}", major_version))
         .join(format!("K{}", lib)))
+}
+
+/// Function to have Conditional Compilation based on KDE Frameworks version.
+pub fn set_version_cfg(version: Version) {
+    let mut minor = 90;
+    while version >= Version::new(5, minor, 0) {
+        println!("cargo:rustc-cfg=kf_{}_{}", 5, minor);
+        minor += 1;
+    }
 }
