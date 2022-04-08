@@ -60,8 +60,8 @@ pub fn get_lib_include_path(lib: &str) -> Result<PathBuf, semver::Error> {
 }
 
 /// Function to have Conditional Compilation based on KDE Frameworks version.
-pub fn set_version_cfg(version: Version) {
-    let mut minor = 90;
+pub fn set_version_cfg(version: Version, least_minor_version: u64) {
+    let mut minor = least_minor_version;
     while version >= Version::new(5, minor, 0) {
         println!("cargo:rustc-cfg=kf_{}_{}", 5, minor);
         minor += 1;

@@ -2,7 +2,7 @@
 name = "kde_frameworks"
 description = "A crate containing useful methods for wrapping KDE Frameworks"
 author = ["Ayush Singh <ayushdevel1325@gmail.com>"]
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 build = "build.rs"
 license = "MIT"
