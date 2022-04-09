@@ -2,7 +2,7 @@
 name = "kde_frameworks"
 description = "A crate containing useful methods for wrapping KDE Frameworks"
 author = ["Ayush Singh <ayushdevel1325@gmail.com>"]
-version = "0.1.4"
+version = "0.2.0"
 edition = "2021"
 license = "MIT"
 readme = "README.md"
@@ -10,7 +10,4 @@ repository = "https://github.com/Ayush1325/kde-frameworks-rs"
 keywords = ["KDE", "kde"]
 
 [dependencies]
-semver = "1.0"
-
-[build-dependencies]
 semver = "1.0"
