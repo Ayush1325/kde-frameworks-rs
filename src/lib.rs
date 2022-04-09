@@ -38,7 +38,7 @@ use std::path::{Path, PathBuf};
 /// ```no_run
 /// use kde_frameworks::link_lib;
 ///
-/// link_lib("I18n");
+/// link_lib("I18n", 5);
 /// ```
 pub fn link_lib(lib: &str, major_version: u64) -> Result<(), semver::Error> {
     let lib_name = helpers::get_lib_name(lib, major_version);
@@ -50,8 +50,9 @@ pub fn link_lib(lib: &str, major_version: u64) -> Result<(), semver::Error> {
 /// This is the path where the header files for the Library are located.
 /// ```no_run
 /// use kde_frameworks::get_lib_include_path;
+/// use std::path::PathBuf;
 ///
-/// get_lib_include_path("I18n");
+/// get_lib_include_path("I18n", 5, &PathBuf::from("/usr/include"));
 /// ```
 pub fn get_lib_include_path(
     lib: &str,

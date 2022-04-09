@@ -30,8 +30,6 @@ jobs:
       with:
         key: rust_cache
 
-    - name: Install kf5-config
-      run: sudo apt install libkf5kdelibs4support5-bin 
     - name: Build
       run: cargo build --verbose --all-features
     - name: Run tests
