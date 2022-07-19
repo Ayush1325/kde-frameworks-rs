@@ -9,13 +9,17 @@ environment variables and provides helpful methods required in most KDE Framewor
 Currently, mostly supposed to be used as a build dependency.
 
 ## Install kf5-config
-### Ubuntu
+### Debian/Ubuntu based
 ```sh
 sudo apt install libkf5kdelibs4support5-bin
 ```
-### Fedroa
+### Fedora
 ```sh
 sudo dnf install kf5-kdelibs4support
+```
+### Arch Linux based
+```sh
+sudo pacman -S kdelibs4support
 ```
 
 ## Environment Variables Read By this Crate
